@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nation Coaching Centre</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#001f3f,#004080);
+    color:white;
+    text-align:center;
+}
+
+header{
+    padding:30px;
+    background:#00264d;
+}
+
+.main-photo{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    margin-top:20px;
+}
+
+.gallery{
+    margin-top:40px;
+}
+
+.gallery img{
+    width:45%;
+    max-width:250px;
+    height:170px;
+    margin:10px;
+    border-radius:10px;
+    object-fit:cover;
+    border:3px solid white;
+}
+
+.facilities{
+    margin-top:50px;
+    background:#003366;
+    padding:30px;
+}
+
+.facilities ul{
+    list-style:none;
+    padding:0;
+    font-size:18px;
+}
+
+.facilities li{
+    margin:10px 0;
+}
+
+button{
+    margin:10px;
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    background:#ffcc00;
+    font-weight:bold;
+}
+
+button:hover{
+    background:white;
+}
+
+.contact{
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Nation Coaching Centre</h1>
+    <p>Loha</p>
+</header>
+
+<h2>Proprietor: Mukesh Sir</h2>
+
+<img src="sir.jpg" class="main-photo">
+
+<p><b>Address:</b> Loha Haat, SBI ATM ke Samne, Smart Garage</p>
+
+<button onclick="callNow()">📞 Admission Now</button>
+
+<br>
+
+<a href="courses.html">
+    <button>📚 Courses</button>
+</a>
+
+<div class="contact">
+    <p>📞 Contact: 9876543210</p>
+    <p>💬 WhatsApp: 9876543210</p>
+</div>
+
+<!-- Classroom Gallery -->
+<div class="gallery">
+    <h2>Our Classroom</h2>
+
+    <img src="class1.jpg">
+    <img src="class2.jpg">
+    <img src="class3.jpg">
+    <img src="class4.jpg">
+</div>
+
+<!-- Coaching Facilities Section -->
+<div class="facilities">
+    <h2>Coaching Facilities</h2>
+    <ul>
+        <li>✔ Metal and Wooden Benches Available</li>
+        <li>✔ White Board with Black Marker</li>
+        <li>✔ Separate Sections for Boys and Girls</li>
+        <li>✔ Good Classroom Environment</li>
+        <li>✔ Big Parking Space for Cycles</li>
+    </ul>
+</div>
+
+<script>
+function callNow(){
+    window.location.href = "tel:9876543210";
+}
+</script>
+
+</body>
+</html>
