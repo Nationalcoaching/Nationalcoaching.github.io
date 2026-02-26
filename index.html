@@ -8,53 +8,13 @@
 body{
     margin:0;
     font-family: Arial;
-    background: linear-gradient(135deg,#001f3f,#004080);
+    background:#001f3f;
     color:white;
     text-align:center;
 }
 
-header{
+.section{
     padding:30px;
-    background:#00264d;
-}
-
-.main-photo{
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    border:5px solid white;
-    object-fit:cover;
-    margin-top:20px;
-}
-
-.gallery{
-    margin-top:40px;
-}
-
-.gallery img{
-    width:45%;
-    max-width:250px;
-    height:170px;
-    margin:10px;
-    border-radius:10px;
-    object-fit:cover;
-    border:3px solid white;
-}
-
-.facilities{
-    margin-top:50px;
-    background:#003366;
-    padding:30px;
-}
-
-.facilities ul{
-    list-style:none;
-    padding:0;
-    font-size:18px;
-}
-
-.facilities li{
-    margin:10px 0;
 }
 
 button{
@@ -72,63 +32,203 @@ button:hover{
     background:white;
 }
 
-.contact{
-    margin-top:20px;
+img{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+}
+
+.gallery img{
+    width:45%;
+    height:160px;
+    margin:8px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.about{
+    background:#002b5c;
+    padding:20px;
+    border-radius:10px;
+    margin:20px;
+}
+
+.notice{
+    background:#ffcc00;
+    color:black;
+    padding:15px;
+    border-radius:10px;
+    margin:20px;
+    font-weight:bold;
+}
+
+.form-popup{
+    display:none;
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:10px;
+    max-width:400px;
+    margin:20px auto;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px;
+}
+
+.faq{
+    text-align:left;
+    max-width:600px;
+    margin:auto;
+}
+
+.whatsapp-fixed{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Nation Coaching Centre</h1>
-    <p>Loha</p>
-</header>
+<!-- HERO -->
+<div class="section">
+<h1>Nation Coaching Centre</h1>
+<h2>Best Coaching Centre in Loha for Class 7–10</h2>
+<p><b>8 Years of Excellence in Education</b></p>
+</div>
 
+<!-- SIR PHOTO -->
+<div class="section">
 <h2>Proprietor: Mukesh Sir</h2>
+<img src="sir.jpg">
+<p><b>Experience:</b> 10 Years Teaching Experience</p>
+<p>📞 Contact: 8409457667</p>
+</div>
 
-<img src="sir.jpg" class="main-photo">
+<!-- ABOUT -->
+<div class="section about">
+<h2>About Us</h2>
+<p>
+Nation Coaching Centre has been successfully providing quality education for the last 8 years in Loha.
+We focus on strong fundamentals, regular tests, and personal attention for every student.
+</p>
+</div>
 
-<p><b>Address:</b> Loha Haat, Front of SBI ATM , Smart Garage</p>
+<!-- WHY CHOOSE US -->
+<div class="section" style="background:#003366;border-radius:10px;margin:20px;">
+<h2>⭐ Why Choose Nation Coaching Centre?</h2>
 
-<button onclick="callNow()">📞 Admission Now</button>
+<p>✔ 8 Years Trusted Coaching Experience</p>
+<p>✔ 10 Years Experienced Teacher – Mukesh Sir</p>
+<p>✔ Small Batch Size for Better Attention</p>
+<p>✔ Weekly Test System</p>
+<p>✔ Special Focus on Board Classes (9th & 10th)</p>
+<p>✔ Extra Classes for Class 10 Students</p>
+<p>✔ Scholarship for Meritorious Students</p>
+<p>✔ Safe & Disciplined Environment</p>
 
+</div>
+
+<!-- TIMINGS -->
+<div class="section">
+<h2>Batch Timings</h2>
+<p>Morning Batch: 7:00 AM – 9:00 AM</p>
+<p>Extra Classes (Class 10): 3:30 PM – 5:00 PM</p>
+</div>
+
+<!-- BUTTONS -->
+<div class="section">
+<button onclick="window.location.href='courses.html'">📚 Courses</button>
+<button onclick="openForm()">📝 Admission Form</button>
+<button onclick="window.location.href='tel:8409457667'">📞 Admission Now</button>
+</div>
+
+<!-- FORM -->
+<div class="form-popup" id="admissionForm">
+<h3>Admission Form</h3>
+<input type="text" id="name" placeholder="Student Name">
+<input type="text" id="class" placeholder="Class">
+<input type="tel" id="mobile" placeholder="Mobile Number">
 <br>
-
-<a href="courses.html">
-    <button>📚 Courses</button>
-</a>
-
-<div class="contact">
-    <p>📞 Contact: 84094 57667</p>
-    <p>💬 WhatsApp: 84094 57667</p>
+<button onclick="sendWhatsApp()">Submit</button>
 </div>
 
-<!-- Classroom Gallery -->
+<!-- NOTICE -->
+<div class="section notice">
+📢 Admission Open | Limited Seats Available | Contact: 8409457667
+</div>
+
+<!-- CLASSROOM PHOTOS -->
+<div class="section">
+<h2>Our Classroom</h2>
 <div class="gallery">
-    <h2>Our Classroom</h2>
-
-    <img src="class1.jpg">
-    <img src="class2.jpg">
-    <img src="class3.jpg">
-    <img src="class4.jpg">
+<img src="class1.jpg">
+<img src="class2.jpg">
+<img src="class3.jpg">
+<img src="class4.jpg">
+</div>
 </div>
 
-<!-- Coaching Facilities Section -->
-<div class="facilities">
-    <h2>Coaching Facilities</h2>
-    <ul>
-        <li>✔ Metal and Wooden Benches Available</li>
-        <li>✔ White Board with Black Marker</li>
-        <li>✔ Separate Sections for Boys and Girls</li>
-        <li>✔ Good Classroom Environment</li>
-        <li>✔ Big Parking Space for Cycles</li>
-    </ul>
+<!-- FACILITIES -->
+<div class="section">
+<h2>Coaching Facilities</h2>
+<p>✔ Metal and Wooden Benches</p>
+<p>✔ White Board Teaching</p>
+<p>✔ Separate Seating Arrangement</p>
+<p>✔ Good Study Environment</p>
+<p>✔ Big Parking Space for Cycles</p>
 </div>
+
+<!-- MAP -->
+<div class="section">
+<h2>Our Location</h2>
+<iframe 
+width="90%" 
+height="250" 
+style="border:0" 
+loading="lazy" 
+allowfullscreen 
+src="https://maps.google.com/maps?q=Loha%20India&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+</div>
+
+<!-- FAQ -->
+<div class="section faq">
+<h2>FAQ</h2>
+<p><b>Q: Do you provide demo classes?</b><br>Yes, 2 days free demo available.</p>
+<p><b>Q: When should fees be paid?</b><br>Fees should be paid in first week of every month.</p>
+</div>
+
+<!-- Sticky WhatsApp -->
+<a href="https://wa.me/918409457667" class="whatsapp-fixed">💬</a>
 
 <script>
-function callNow(){
-    window.location.href = "tel:84094 57667";
+function openForm(){
+    document.getElementById("admissionForm").style.display="block";
+}
+
+function sendWhatsApp(){
+    var name=document.getElementById("name").value;
+    var studentClass=document.getElementById("class").value;
+    var mobile=document.getElementById("mobile").value;
+
+    var message="New Admission Request:%0AName: "+name+
+    "%0AClass: "+studentClass+
+    "%0AMobile: "+mobile;
+
+    window.open("https://wa.me/918409457667?text="+message,"_blank");
 }
 </script>
 
