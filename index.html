@@ -102,6 +102,9 @@ input{
 
 <body>
 
+<!-- CLICK SOUND -->
+<audio id="clickSound" src="click.mp3"></audio>
+
 <!-- HERO -->
 <div class="section">
 <h1>Nation Coaching Centre</h1>
@@ -150,9 +153,10 @@ We focus on strong fundamentals, regular tests, and personal attention for every
 
 <!-- BUTTONS -->
 <div class="section">
-<button onclick="window.location.href='courses.html'">📚 Courses</button>
-<button onclick="openForm()">📝 Admission Form</button>
-<button onclick="window.location.href='tel:8409457667'">📞 Admission Now</button>
+<button onclick="playClick(); window.location.href='courses.html'">📚 Courses</button>
+<button onclick="playClick(); openForm()">📝 Admission Form</button>
+<button onclick="playClick(); window.location.href='tel:8409457667'">📞 Admission Now</button>
+<button onclick="playClick(); window.location.href='test.html'">📝 Scholarship Test</button>
 </div>
 
 <!-- FORM -->
@@ -162,7 +166,7 @@ We focus on strong fundamentals, regular tests, and personal attention for every
 <input type="text" id="class" placeholder="Class">
 <input type="tel" id="mobile" placeholder="Mobile Number">
 <br>
-<button onclick="sendWhatsApp()">Submit</button>
+<button onclick="playClick(); sendWhatsApp()">Submit</button>
 </div>
 
 <!-- NOTICE -->
@@ -212,9 +216,14 @@ src="https://maps.google.com/maps?q=Loha%20India&t=&z=13&ie=UTF8&iwloc=&output=e
 </div>
 
 <!-- Sticky WhatsApp -->
-<a href="https://wa.me/918409457667" class="whatsapp-fixed">💬</a>
+<a href="https://wa.me/918409457667" class="whatsapp-fixed" onclick="playClick()">💬</a>
 
 <script>
+
+function playClick(){
+    document.getElementById("clickSound").play();
+}
+
 function openForm(){
     document.getElementById("admissionForm").style.display="block";
 }
@@ -230,6 +239,7 @@ function sendWhatsApp(){
 
     window.open("https://wa.me/918409457667?text="+message,"_blank");
 }
+
 </script>
 
 </body>
